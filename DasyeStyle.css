@@ -1,0 +1,308 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;  
+    background: #2b00ff;
+    background: linear-gradient(127deg,#2b00ff 0%, #00caff 80%);
+    background: -webkit-linear-gradient(127deg,#2b00ff 0%, #00caff 80%);
+    background: -moz-linear-gradient(127deg,#2b00ff 0%, #00caff 80%);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: calc(100vh - 150px);
+  }
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: rgb(43, 62, 62);
+    z-index: 10;
+    background: #2b00ff;
+    background: linear-gradient(127deg,#2b00ff 0%, #00caff 80%);
+    background: -webkit-linear-gradient(127deg,#2b00ff 0%, #00caff 80%);
+    background: -moz-linear-gradient(127deg,#2b00ff 0%, #00caff 80%);
+}
+
+  .bloc {
+    position: relative;
+    padding-top: 3.6rem;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+  }
+
+  .blocCabine {
+    /* visibility: hidden; */
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 3.6rem;
+    /* width: calc(80vmax - 4px); */
+    background-image: url(./Assets/BlocCabineDasye.jpg); 
+    background-size: contain;
+    background-position: center;
+    border:  rgb(43, 62, 62) solid 2px;
+}
+
+ .blocCabineSvg rect {
+    fill: red;
+    fill-opacity: 0.00001;  
+ }
+
+.blocCabineSvg .is-active rect {
+    stroke: red;
+    stroke-width: 3px;
+    z-index: 100;
+}
+
+svg a:focus {
+    stroke: red;
+    stroke-width: 3px;
+    outline: none;
+    scroll-margin-top: 200px;
+}
+
+.links {
+    position: fixed;
+    min-height: 100vh;
+    width: 10%;
+    right: 0;
+    color:  rgb(43, 62, 62);
+    text-align: center;
+    background: #2b00ff;
+    background: linear-gradient(270deg,#2b00ff 0%, #00caff 80%);
+    background: -webkit-linear-gradient(270deg,#2b00ff 0%, #00caff 80%);
+    background: -moz-linear-gradient(270deg,#2b00ff 0%, #00caff 80%);
+}
+
+
+.links a {
+    font-size: 0.8em;
+    font-weight: 500;
+    line-height: 0.2em;
+    color:  rgb(32, 44, 44);
+    text-decoration: none;
+    transition: color 0.2s;    
+}
+
+.links a.is-active {
+    text-decoration: underline;
+    color: red;
+}
+
+.links ul {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.links li:first-child{
+    padding-top: 0.6rem;
+
+}
+.navbar {
+    position: fixed;
+    left: 0;
+    width: 10%;
+    min-height: 100vh;
+}
+
+.navbar li {
+    font-size: 0.8em;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 2px;
+    border: rgb(43, 62, 62) solid 2px ;
+    cursor: pointer;
+}
+.navbar li:hover {
+    background-color: dodgerblue;  
+}
+.navbar li:target {
+    background-color: red;
+}
+    
+.navbar a {
+    text-decoration: none;
+    font-weight: 500;
+    color:  rgb(32, 44, 44);
+}
+
+.u {
+    background-color: rgba(119, 136, 153, 0.81);
+}
+.d {
+    background-color: paleturquoise;
+}
+.t {
+    background-color:rgba(233, 71, 71, 0.72);
+}
+.a {
+    background-color: #48dadc;
+}
+
+#searchBar {
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+
+}
+
+input {
+  margin: 2px;
+  align-items: center;
+  width: 85%;
+  border-color: black;
+}
+
+button {
+    margin-top: 0.5rem;
+    cursor: pointer;
+    color:  rgb(32, 44,44);
+    background-color: rgb(160, 211, 255);
+}
+button:hover {
+    background-color: rgb(30, 144, 255, 1);
+    color:  rgb(43, 62, 62);
+}
+
+/* #couloir {
+    position: absolute;
+    float: right;
+    right: 10rem;
+    top: 1.3rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 2px;
+    color: rgb(43, 62, 62);
+    border: solid 2px rgb(43, 62, 62);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#couloir:hover {
+    color: rgb(210, 22, 22);
+    border: solid 2px rgb(210, 22, 22);
+
+} */
+li span {
+    color: red;
+}
+
+
+
+/****************************** POPUP **************************/
+
+/* .box {
+    width: 320px;
+    margin: 10rem auto;
+    padding-top: 10rem;
+    background: rgba(255,255, 255, 0.3);
+    padding: 2.5rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+} */
+.button {
+    position: absolute;
+    top: 1rem;
+    right: 15%;
+    font-size: 1.2rem;
+    padding: 2px;
+    color: #fff;
+    border: 2px solid #12FCF8;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(10, 149, 147, 0.475);
+    transition: all 0.3s ease-out;
+}
+.button:hover {
+    background: #12FCF8;
+    color: #333;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    transition: opacity 0.4s;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.3rem;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+}
+.overlay img {
+    width: 100%;
+}
+.popup {
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    width: 70%;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    /* overflow: hidden;
+    overflow-y: scroll; */
+}
+.popup .cross {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: #333;
+}
+.popup .cross:hover {
+    color: #12FCF8;
+}
+.popup ul {
+    height: fit-content;
+}
+.popup img {
+    width: 70%;
+    height: auto;
+}
+
+
+#resetSearch {
+    position: relative;
+    display: flex;
+}
+
+#resetSearch button {
+    position: absolute;
+    right: 2px;
+    top: 0;
+    transform: translate(0, -28%);
+    background-color: white;
+    color: red;
+    border-left: none;
+    border-color: black;
+    border-radius: 3px;
+}
+
+/* .scroller {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 600px;
+
+} */
